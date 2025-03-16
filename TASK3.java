@@ -20,8 +20,8 @@ class Account
         {
            balance=balance+ amt;
            double newbalance=balance;
-            System.out.println("Successfully deposited: $" + amt);
-            System.out.println("Updated balance:"+newbalance);
+            System.out.println("Successfully deposited: ₹"+ amt);
+            System.out.println("Updated balance:₹"+newbalance);
             
         } 
         else 
@@ -35,7 +35,8 @@ class Account
         if (amt > 0 && amt <= balance) 
         {
             balance=balance- amt;
-            System.out.println("Successfully withdrew: $" + amt);
+            System.out.println("Successfully withdrew: ₹" + amt);
+            System.out.println("Current balance: ₹"+balance);
             return true;
         } 
         else 
@@ -86,12 +87,12 @@ class ATM {
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
-        } while (choice != 4);
+        }while (choice != 4);
     }
 
     private void checkBalance() 
     {
-        System.out.println("Current balance: $" + uAccount.getBalance());
+        System.out.println("Current balance: ₹" + uAccount.getBalance());
     }
 
     private void deposit() 
